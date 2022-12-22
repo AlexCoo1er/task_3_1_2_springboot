@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+
+<form method="POST" th:action="@{/users}" th: th:object="${user}">
+    <label for="name">Name</label>
+    <input name="name" type="text" th: th:field="*{name}" id="name"/>
+
+    <br>
+
+    <label for="lastname">Lastname</label>
+    <input name="lastname" type="text" th: th:field="*{lastName}" id="lastname"/><!--тег создает поле для ввода-->
+
+    <br>
+
+    <label for="age">Age</label>
+    <input name="age" type="text" th: th:field="*{age}" id="age"/>
+
+    <br>
+
+    <input type="submit" value="Add"/>
+</form>
+</html>
+</html>
